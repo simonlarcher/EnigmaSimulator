@@ -13,14 +13,17 @@
         android:orientation="horizontal" >
         <Button
             android:id="@+id/rotor3_auswahl"
+            android:text="@string/rotor_auswahl_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/rotor2_auswahl"
+            android:text="@string/rotor_auswahl_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/rotor1_auswahl"
+            android:text="@string/rotor_auswahl_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"  />
     </LinearLayout>
