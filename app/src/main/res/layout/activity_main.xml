@@ -31,34 +31,71 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
         <Button
+            android:id="@+id/reflektor"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/reklektor_auswahl"/>
         <Button
+            android:id="@+id/rotor_auswahl3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/counter_3"/>
         <Button
+            android:id="@+id/rotor_auswahl2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  />
+            android:layout_height="wrap_content"
+            android:text="@string/rotor_2"/>
         <Button
+            android:id="@+id/rotor_auswahl1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  />
+            android:layout_height="wrap_content"
+            android:text="@string/rotor_1"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
         <Button
+            android:id="@+id/rotor_counter3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/counter_3"/>
         <Button
+            android:id="@+id/rotor_counter2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/counter_2"/>
         <Button
+            android:id="@+id/rotor_counter1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  />
+            android:layout_height="wrap_content"
+            android:text="@string/counter_1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:id="@+id/code_ausgabe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ausgabe_anfangs_text" />
+
+        <EditText
+            android:id="@+id/code_eingabe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
     </LinearLayout>
 
 
