@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Gui gui;
+    private Core core;
     private Button[] rotorauswahl, counter;
     private TextView[] rotor;
     private TextView code_ausgabe;
@@ -20,6 +21,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         gui = new Gui(this);
+        core = new Core();
+        allesInizialisieren();
+        idsZuweisen();
+        textViewsTextZuweisen();
     }
 
     private void allesInizialisieren(){
@@ -59,15 +64,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         counter[2] = (Button) findViewById(R.id.rotor_counter3);
 
         rotor[0] = (TextView) findViewById(R.id.rotor_text_anzeige1);
-        rotor[0] = (TextView) findViewById(R.id.rotor_text_anzeige2);
-        rotor[0] = (TextView) findViewById(R.id.rotor_text_anzeige3);
+        rotor[1] = (TextView) findViewById(R.id.rotor_text_anzeige2);
+        rotor[2] = (TextView) findViewById(R.id.rotor_text_anzeige3);
 
         code_ausgabe = (TextView) findViewById(R.id.code_ausgabe);
 
         reflektor = (Button) findViewById(R.id.reflektor);
 
         code_eingabe = (EditText) findViewById(R.id.code_eingabe);
+    }
 
+    private void textViewsTextZuweisen(){
+        for (int i = 0; i < counter.length; i++){
+            rotor[i].setText(core.getRotor(i).getVersciebung());
+        }
     }
 
     @Override
@@ -83,7 +93,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         for (int i = 0; i < counter.length; i++){
             if(counter[i] == o){
-                //counten
+                core.getRotor(i).verschieben();
+                rotor[i].setText(core.getRotor(i).getVersciebung());
             }
         }
     }
