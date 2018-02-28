@@ -38,18 +38,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/reklektor_auswahl"/>
-        <Button
-            android:id="@+id/rotor_auswahl3"
+        <TextView
+            android:id="@+id/rotor_text_anzeige3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/counter_3"/>
-        <Button
-            android:id="@+id/rotor_auswahl2"
+            android:text="@string/rotor_3"/>
+        <TextView
+            android:id="@+id/rotor_text_anzeige2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rotor_2"/>
-        <Button
-            android:id="@+id/rotor_auswahl1"
+        <TextView
+            android:id="@+id/rotor_text_anzeige1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rotor_1"/>
