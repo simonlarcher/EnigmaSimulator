@@ -11,4 +11,5 @@
     <string name="counter_2">counter 2</string>
     <string name="counter_3">counter 3</string>
     <string name="ausgabe_anfangs_text">Code Ausgabe</string>
+    <string name="umwandeln">Umwandeln</string>
 </resources>
