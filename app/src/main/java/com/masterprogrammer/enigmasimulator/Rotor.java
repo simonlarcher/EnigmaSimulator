@@ -38,4 +38,7 @@ public class Rotor {
         }
         return code;
     }
+    public void setNewEinstellung(String[] einstellung){
+        this.einstellung = einstellung;
+    }
 }

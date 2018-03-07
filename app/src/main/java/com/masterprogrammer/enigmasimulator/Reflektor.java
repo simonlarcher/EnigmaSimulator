@@ -13,4 +13,7 @@ public class Reflektor {
     public String getEntgegengesetzteZahl(int welcheZahlImReflektor){
         return reflektor[welcheZahlImReflektor];
     }
+    public void setNewEinstellung(String[] einstellung){
+        this.reflektor = einstellung;
+    }
 }
