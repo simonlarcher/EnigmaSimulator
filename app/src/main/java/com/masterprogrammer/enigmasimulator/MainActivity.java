@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         gui = new Gui(this);
         core = new Core();
+        //boh
         allesInizialisieren();
         idsZuweisen();
         textViewsTextZuweisen();
