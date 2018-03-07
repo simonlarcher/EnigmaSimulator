@@ -13,9 +13,7 @@ public class Core {
 
     public Core(){
         settingsInitialisieren();
-        settingsInitialisieren();
         verschlüsselungsalgorithmus = new Verschlüsselungsalgorithmus(rotor1, rotor2, rotor3, reflektor, alphabet, plugboard);
-
     }
     private void settingsInitialisieren(){
         rotor1 = new Rotor(new String[]{"E","K","M","F","L","G","D","Q","V","Z","N","T","O","W","Y","H","X","U","S","P","A","I","B","R","C","J"}, "Q");
