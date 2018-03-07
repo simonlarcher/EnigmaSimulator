@@ -56,9 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tv_rotor[0] = (TextView) findViewById(R.id.tv_rotor_text_anzeige1);
         tv_rotor[1] = (TextView) findViewById(R.id.tv_rotor_text_anzeige2);
         tv_rotor[2] = (TextView) findViewById(R.id.tv_rotor_text_anzeige3);
-        for(int i = 0; i < tv_rotor.length; i++){
-            tv_rotor[i] = new TextView(this);
-        }
+
 
         //b_umwandeln = new Button(this);
         b_umwandeln = (Button) findViewById(R.id.b_umwandeln);
@@ -88,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //wechseln
         }
         if(o == b_umwandeln){
-            String code= core.verOderEntschlüsseln(et_code_eingabe.getText() + "");
+            String code= core.verOderEntschlüsseln("a");
             tv_code_ausgabe.setText(code);
             textViewsTextZuweisen();
         }
@@ -101,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(b_counter[i] == o){
                 core.getRotor(i).verschieben();
                 tv_rotor[i].setText(core.getRotor(i).getVersciebung() + "");
-                Toast.makeText(this, "ich wurde grdruakt", Toast.LENGTH_SHORT).show();
             }
         }
     }

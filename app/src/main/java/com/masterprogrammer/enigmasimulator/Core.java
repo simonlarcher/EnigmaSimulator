@@ -35,12 +35,12 @@ public class Core {
         }
     }
     public String verOderEntschlüsseln(String code){
-        char[] charArray = code.toCharArray();
-        String neuerCode = "";
-        for(int i = 0; i < charArray.length; i++){
-            neuerCode += verschlüsselungsalgorithmus.verschluesseln(charArray[i] + "");
-        }
-        return neuerCode;
+        //char[] charArray = code.toCharArray();
+        //String neuerCode = "";
+        //for(int i = 0; i < charArray.length; i++){
+            //neuerCode += verschlüsselungsalgorithmus.verschluesseln(charArray[i] + "");
+        //}
+        return verschlüsselungsalgorithmus.verschluesseln("A");
     }
     public Plugboard getPlugboard(){
         return plugboard;
