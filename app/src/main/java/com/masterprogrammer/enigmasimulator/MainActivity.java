@@ -88,7 +88,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //wechseln
         }
         if(o == b_umwandeln){
-            //Code verschlüsseln
+            String code= core.verOderEntschlüsseln(et_code_eingabe.getText() + "");
+            tv_code_ausgabe.setText(code);
+            textViewsTextZuweisen();
         }
         for (int i = 0; i < b_rotorauswahl.length; i++){
             if(b_rotorauswahl[i] == o){
@@ -101,9 +103,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tv_rotor[i].setText(core.getRotor(i).getVersciebung() + "");
                 Toast.makeText(this, "ich wurde grdruakt", Toast.LENGTH_SHORT).show();
             }
-        }
-        if(b_umwandeln.getId() == v.getId()){
-
         }
     }
 }
