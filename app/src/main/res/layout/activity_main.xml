@@ -7,25 +7,39 @@
     android:orientation="vertical"
     tools:context="com.masterprogrammer.enigmasimulator.MainActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_height="250px"
+        android:orientation="horizontal"
+        android:background="@drawable/top_buttons"
+        >
         <Button
             android:id="@+id/b_rotor3_auswahl"
             android:text="@string/rotor_auswahl_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginLeft="72px"
+            android:layout_marginTop="50px"
+            android:background="@android:color/transparent"
+
+            />
         <Button
             android:id="@+id/b_rotor2_auswahl"
             android:text="@string/rotor_auswahl_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginLeft="240px"
+            android:layout_marginTop="50px"
+            android:background="@android:color/transparent"/>
         <Button
             android:id="@+id/b_rotor1_auswahl"
             android:text="@string/rotor_auswahl_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"  />
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginLeft="250px"
+            android:layout_marginTop="50px"
+            android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <LinearLayout
@@ -37,45 +51,64 @@
             android:id="@+id/b_reflektor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/reklektor_auswahl"/>
-        <TextView
-            android:id="@+id/tv_rotor_text_anzeige3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rotor_3"/>
-        <TextView
-            android:id="@+id/tv_rotor_text_anzeige2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rotor_2"/>
-        <TextView
-            android:id="@+id/tv_rotor_text_anzeige1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rotor_1"/>
+            android:text="@string/reklektor_auswahl"
+            />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="600px"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+                android:background="@drawable/mainboard"
+            >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300px"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    >
+                <TextView
+                    android:id="@+id/tv_rotor_text_anzeige3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rotor_3"/>
+                <TextView
+                    android:id="@+id/tv_rotor_text_anzeige2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rotor_2"/>
+                <TextView
+                    android:id="@+id/tv_rotor_text_anzeige1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rotor_1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+                    <Button
+                        android:id="@+id/b_rotor_counter3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/counter_3"/>
+                    <Button
+                        android:id="@+id/b_rotor_counter2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/counter_2"/>
+                    <Button
+                        android:id="@+id/b_rotor_counter1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/counter_1"/>
+                </LinearLayout>
+            </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="10dp">
-        <Button
-            android:id="@+id/b_rotor_counter3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/counter_3"/>
-        <Button
-            android:id="@+id/b_rotor_counter2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/counter_2"/>
-        <Button
-            android:id="@+id/b_rotor_counter1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/counter_1"/>
-    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
