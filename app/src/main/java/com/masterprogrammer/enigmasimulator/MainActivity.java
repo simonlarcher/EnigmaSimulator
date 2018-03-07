@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //wechseln
         }
         if(o == b_umwandeln){
-            String code= core.verOderEntschlüsseln("a");
+            String code= core.verOderEntschlüsseln(et_code_eingabe.getText() + "");
             tv_code_ausgabe.setText(code);
             textViewsTextZuweisen();
         }
