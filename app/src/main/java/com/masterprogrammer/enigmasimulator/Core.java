@@ -34,6 +34,14 @@ public class Core {
             return rotor3;
         }
     }
+    public String verOderEntschlüsseln(String code){
+        char[] charArray = code.toCharArray();
+        String neuerCode = "";
+        for(int i = 0; i < charArray.length; i++){
+            neuerCode += verschlüsselungsalgorithmus.verschluesseln(charArray[i] + "");
+        }
+        return neuerCode;
+    }
     public Plugboard getPlugboard(){
         return plugboard;
     }

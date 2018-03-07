@@ -2,19 +2,21 @@ package com.masterprogrammer.enigmasimulator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Gui gui;
     private Core core;
-    private Button[] rotorauswahl, counter;
-    private TextView[] rotor;
-    private TextView code_ausgabe;
-    private Button reflektor;
-    private EditText code_eingabe;
+    private Button[] b_rotorauswahl, b_counter;
+    private TextView[] tv_rotor;
+    private TextView tv_code_ausgabe;
+    private Button b_reflektor, b_umwandeln;
+    private EditText et_code_eingabe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,80 +24,84 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         gui = new Gui(this);
         core = new Core();
-        //boh
+
+
+        //Gui
+
         allesInizialisieren();
-        idsZuweisen();
+
         textViewsTextZuweisen();
     }
 
     private void allesInizialisieren(){
         //rotoren auswahl
-        rotorauswahl = new Button[3];
-        for(int i = 0; i < 3; i++){
-            rotorauswahl[i] = new Button(this);
-            rotorauswahl[i].setOnClickListener(this);
+        b_rotorauswahl = new Button[3];
+        b_rotorauswahl[0] = (Button) findViewById(R.id.b_rotor1_auswahl);
+        b_rotorauswahl[1] = (Button) findViewById(R.id.b_rotor2_auswahl);
+        b_rotorauswahl[2] = (Button) findViewById(R.id.b_rotor3_auswahl);
+        for(int i=0; i<b_rotorauswahl.length; i++){
+            ((Button)b_rotorauswahl[i]).setOnClickListener(this);
         }
+
         //counter von Rotoren
-        counter = new Button[3];
-        for(int i = 0; i < 3; i++){
-            counter[i] = new Button(this);
-            counter[i].setOnClickListener(this);
+        b_counter = new Button[3];
+        b_counter[0] = (Button) findViewById(R.id.b_rotor_counter1);
+        b_counter[1] = (Button) findViewById(R.id.b_rotor_counter2);
+        b_counter[2] = (Button) findViewById(R.id.b_rotor_counter3);
+        for(int i = 0; i < b_counter.length; i++) {
+            b_counter[i].setOnClickListener(this);
         }
         //zahlen aneige
-        rotor = new TextView[3];
-        for(int i = 0; i < 3; i++){
-            rotor[i] = new TextView(this);
+        tv_rotor = new TextView[3];
+        tv_rotor[0] = (TextView) findViewById(R.id.tv_rotor_text_anzeige1);
+        tv_rotor[1] = (TextView) findViewById(R.id.tv_rotor_text_anzeige2);
+        tv_rotor[2] = (TextView) findViewById(R.id.tv_rotor_text_anzeige3);
+        for(int i = 0; i < tv_rotor.length; i++){
+            tv_rotor[i] = new TextView(this);
         }
 
-        reflektor = new Button(this);
-        reflektor.setOnClickListener(this);
+        //b_umwandeln = new Button(this);
+        b_umwandeln = (Button) findViewById(R.id.b_umwandeln);
+        b_umwandeln.setOnClickListener(this);
 
-        code_ausgabe = new TextView(this);
+        //b_reflektor = new Button(this);
+        b_reflektor = (Button) findViewById(R.id.b_reflektor);
+        b_reflektor.setOnClickListener(this);
 
-        code_eingabe = new EditText(this);
-    }
+        tv_code_ausgabe = (TextView) findViewById(R.id.tv_code_ausgabe);
 
-    private void idsZuweisen(){
-        rotorauswahl[0] = (Button) findViewById(R.id.rotor1_auswahl);
-        rotorauswahl[1] = (Button) findViewById(R.id.rotor2_auswahl);
-        rotorauswahl[2] = (Button) findViewById(R.id.rotor3_auswahl);
-
-        counter[0] = (Button) findViewById(R.id.rotor_counter1);
-        counter[1] = (Button) findViewById(R.id.rotor_counter2);
-        counter[2] = (Button) findViewById(R.id.rotor_counter3);
-
-        rotor[0] = (TextView) findViewById(R.id.rotor_text_anzeige1);
-        rotor[1] = (TextView) findViewById(R.id.rotor_text_anzeige2);
-        rotor[2] = (TextView) findViewById(R.id.rotor_text_anzeige3);
-
-        code_ausgabe = (TextView) findViewById(R.id.code_ausgabe);
-
-        reflektor = (Button) findViewById(R.id.reflektor);
-
-        code_eingabe = (EditText) findViewById(R.id.code_eingabe);
+        et_code_eingabe = (EditText) findViewById(R.id.et_code_eingabe);
     }
 
     private void textViewsTextZuweisen(){
-        for (int i = 0; i < counter.length; i++){
-            rotor[i].setText(core.getRotor(i).getVersciebung());
+        for (int i = 0; i < tv_rotor.length; i++){
+            tv_rotor[i].setText(core.getRotor(i).getVersciebung() + "");
         }
     }
 
     @Override
     public void onClick(View v) {
+
+
         Object o = findViewById(v.getId());
-        if (o == reflektor) {
+        if (o == b_reflektor) {
             //wechseln
         }
-        for (int i = 0; i < rotorauswahl.length; i++){
-            if(rotorauswahl[i] == o){
+        if(o == b_umwandeln){
+            String code= core.verOderEntschlüsseln(et_code_eingabe.getText() + "");
+            tv_code_ausgabe.setText(code);
+            textViewsTextZuweisen();
+        }
+        for (int i = 0; i < b_rotorauswahl.length; i++){
+            if(b_rotorauswahl[i] == o){
                 //rotoren wechseln
             }
         }
-        for (int i = 0; i < counter.length; i++){
-            if(counter[i] == o){
+        for (int i = 0; i < b_counter.length; i++){
+            if(b_counter[i] == o){
                 core.getRotor(i).verschieben();
-                rotor[i].setText(core.getRotor(i).getVersciebung());
+                tv_rotor[i].setText(core.getRotor(i).getVersciebung() + "");
+                Toast.makeText(this, "ich wurde grdruakt", Toast.LENGTH_SHORT).show();
             }
         }
     }
