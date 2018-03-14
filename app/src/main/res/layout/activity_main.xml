@@ -116,32 +116,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
+
                     android:layout_marginTop="98px"
                     >
                     <Button
                         android:id="@+id/b_rotor_counter3"
-                        android:layout_width="100px"
-                        android:layout_height="100px"
+                        android:layout_width="150px"
+                        android:layout_height="150px"
 
                         android:background="@android:color/transparent"
-                        android:layout_marginLeft="70px"
+                        android:layout_marginLeft="55px"
                         />
                     <Button
                         android:id="@+id/b_rotor_counter2"
-                        android:layout_width="100px"
-                        android:layout_height="100px"
+                        android:layout_width="150px"
+                        android:layout_height="150px"
 
                         android:background="@android:color/transparent"
-                        android:layout_marginLeft="195px"
+                        android:layout_marginLeft="115px"
                         />
                     <Button
                         android:id="@+id/b_rotor_counter1"
-                        android:layout_width="100px"
-                        android:layout_height="100px"
+                        android:layout_width="150px"
+                        android:layout_height="150px"
 
                         android:background="@android:color/transparent"
-                        android:layout_marginLeft="185px"
+                        android:layout_marginLeft="115px"
                         />
                 </LinearLayout>
             </LinearLayout>
