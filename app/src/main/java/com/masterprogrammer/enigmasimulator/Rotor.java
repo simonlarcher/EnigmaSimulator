@@ -23,7 +23,7 @@ public class Rotor {
     public void verschieben(){
         verschiebung++;
         if(verschiebung == 26){
-            verschiebung = 1;
+            verschiebung = 0;
         }
     }
     public String getSprung(){

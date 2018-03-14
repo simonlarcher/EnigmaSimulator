@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Object o = findViewById(v.getId());
         if (o == b_reflektor) {
-            //wechseln
+            //reflektor wechseln
         }
         if(o == b_umwandeln){
             String code= core.verOderEntschlüsseln(et_code_eingabe.getText() + "");
