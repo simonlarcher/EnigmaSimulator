@@ -38,7 +38,8 @@ public class Rotor {
         }
         return code;
     }
-    public void setNewEinstellung(String[] einstellung){
+    public void setNewEinstellung(String[] einstellung, String sprung){
         this.einstellung = einstellung;
+        this.sprung = sprung;
     }
 }
