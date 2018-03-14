@@ -10,17 +10,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80sp"
+        android:layout_height="70sp"
         android:orientation="horizontal"
         android:background="@drawable/top_buttons"
         >
         <Button
             android:id="@+id/b_rotor3_auswahl"
             android:text="@string/rotor_auswahl_3"
-            android:layout_width="50sp"
-            android:layout_height="50sp"
-            android:layout_marginLeft="25sp"
-            android:layout_marginTop="14sp"
+            android:layout_width="42sp"
+            android:layout_height="42sp"
+            android:layout_marginLeft="23sp"
+            android:layout_marginTop="12sp"
             android:textSize="20sp"
             android:gravity="center"
             android:background="@android:color/transparent"
@@ -29,20 +29,20 @@
         <Button
             android:id="@+id/b_rotor2_auswahl"
             android:text="@string/rotor_auswahl_2"
-            android:layout_width="50sp"
-            android:layout_height="50sp"
-            android:layout_marginLeft="80sp"
-            android:layout_marginTop="14sp"
+            android:layout_width="42sp"
+            android:layout_height="42sp"
+            android:layout_marginLeft="73sp"
+            android:layout_marginTop="12sp"
             android:textSize="20sp"
             android:gravity="center"
             android:background="@android:color/transparent"/>
         <Button
             android:id="@+id/b_rotor1_auswahl"
             android:text="@string/rotor_auswahl_1"
-            android:layout_width="50sp"
-            android:layout_height="50sp"
-            android:layout_marginLeft="80sp"
-            android:layout_marginTop="14sp"
+            android:layout_width="42sp"
+            android:layout_height="42sp"
+            android:layout_marginLeft="73sp"
+            android:layout_marginTop="12sp"
             android:textSize="20sp"
             android:gravity="center"
             android:background="@android:color/transparent"/>
@@ -50,98 +50,100 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="650px"
+        android:layout_height="210sp"
         android:orientation="horizontal"
         android:paddingTop="10dp"
         android:background="@drawable/kabelsalat">
         <LinearLayout
-            android:layout_width="300px"
-            android:layout_height="match_parent"
+            android:layout_width="90sp"
+            android:layout_height="170sp"
             android:background="@drawable/side_button">
             <Button
                 android:id="@+id/b_reflektor"
-                android:layout_width="170px"
-                android:layout_height="220px"
+                android:layout_width="50sp"
+                android:layout_height="63sp"
                 android:text="@string/reklektor_auswahl"
                 android:background="@android:color/transparent"
-                android:layout_marginTop="190px"
-                android:layout_marginLeft="60px"
-                android:textSize="40px"
+                android:layout_marginTop="52sp"
+                android:layout_marginLeft="19sp"
+                android:textSize="15sp"
                 android:gravity="center"
                 />
         </LinearLayout>
             <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="600px"
+            android:layout_width="215sp"
+            android:layout_height="170sp"
             android:orientation="vertical"
-            android:paddingTop="10dp"
                 android:background="@drawable/mainboard"
             >
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300px"
+                    android:layout_height="100sp"
                     android:orientation="horizontal"
-                    android:paddingLeft="50px"
-                    android:paddingTop="5px"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="15sp"
+
                     >
                     <TextView
                         android:id="@+id/tv_rotor_text_anzeige3"
-                        android:layout_width="160px"
-                        android:layout_height="160px"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
                         android:text="@string/rotor_3"
-                        android:textSize="80px"
+                        android:textSize="25sp"
                         android:gravity="center"
+
                         />
                     <TextView
                         android:id="@+id/tv_rotor_text_anzeige2"
-                        android:layout_width="160px"
-                        android:layout_height="160px"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
                         android:text="@string/rotor_2"
-                        android:layout_marginLeft="120px"
-                        android:textSize="80px"
+                        android:layout_marginLeft="44sp"
+                        android:textSize="25sp"
                         android:gravity="center"
                         />
                     <TextView
                         android:id="@+id/tv_rotor_text_anzeige1"
-                        android:layout_width="160px"
-                        android:layout_height="160px"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
                         android:text="@string/rotor_1"
-                        android:layout_marginLeft="120px"
-                        android:textSize="80px"
+                        android:layout_marginLeft="40sp"
+                        android:textSize="25sp"
                         android:gravity="center"
                         />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="70sp"
                     android:orientation="horizontal"
 
-                    android:layout_marginTop="98px"
+                    android:layout_marginTop="1sp"
+                    android:paddingTop="20sp"
                     >
                     <Button
                         android:id="@+id/b_rotor_counter3"
-                        android:layout_width="150px"
-                        android:layout_height="150px"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
 
                         android:background="@android:color/transparent"
-                        android:layout_marginLeft="55px"
+                        android:layout_marginLeft="15sp"
                         />
                     <Button
                         android:id="@+id/b_rotor_counter2"
-                        android:layout_width="150px"
-                        android:layout_height="150px"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
 
                         android:background="@android:color/transparent"
-                        android:layout_marginLeft="115px"
+                        android:layout_marginLeft="35sp"
                         />
                     <Button
                         android:id="@+id/b_rotor_counter1"
-                        android:layout_width="150px"
-                        android:layout_height="150px"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
 
                         android:background="@android:color/transparent"
-                        android:layout_marginLeft="115px"
+                        android:layout_marginLeft="38sp"
                         />
                 </LinearLayout>
             </LinearLayout>
