@@ -23,7 +23,7 @@ public class Rotor {
     public void verschieben(){
         verschiebung++;
         if(verschiebung == 26){
-            verschiebung = 1;
+            verschiebung = 0;
         }
     }
     public String getSprung(){
@@ -38,7 +38,8 @@ public class Rotor {
         }
         return code;
     }
-    public void setNewEinstellung(String[] einstellung){
+    public void setNewEinstellung(String[] einstellung, String sprung){
         this.einstellung = einstellung;
+        this.sprung = sprung;
     }
 }

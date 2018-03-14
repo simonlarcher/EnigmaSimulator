@@ -1,5 +1,7 @@
 package com.masterprogrammer.enigmasimulator;
 
+import android.util.Log;
+
 /**
  * Created by Benedikt Smith on 28.02.2018.
  */
@@ -35,12 +37,15 @@ public class Core {
         }
     }
     public String verOderEntschlüsseln(String code){
-        //char[] charArray = code.toCharArray();
-        //String neuerCode = "";
-        //for(int i = 0; i < charArray.length; i++){
-            //neuerCode += verschlüsselungsalgorithmus.verschluesseln(charArray[i] + "");
-        //}
-        return verschlüsselungsalgorithmus.verschluesseln("A");
+        code = code.toUpperCase();
+        //String[] ary = code.split("");
+
+        String neuerCode = "";
+        for(int i = 0; i < code.length(); i++){
+            Log.i("Hallo", code.charAt(i) + "bb" );
+            neuerCode += verschlüsselungsalgorithmus.verschluesseln(code.charAt(i) + "");
+        }
+        return neuerCode;
     }
     public Plugboard getPlugboard(){
         return plugboard;
