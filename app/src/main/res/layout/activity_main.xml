@@ -21,6 +21,8 @@
             android:layout_height="150px"
             android:layout_marginLeft="72px"
             android:layout_marginTop="50px"
+            android:textSize="60px"
+            android:gravity="center"
             android:background="@android:color/transparent"
 
             />
@@ -31,6 +33,8 @@
             android:layout_height="150px"
             android:layout_marginLeft="240px"
             android:layout_marginTop="50px"
+            android:textSize="60px"
+            android:gravity="center"
             android:background="@android:color/transparent"/>
         <Button
             android:id="@+id/b_rotor1_auswahl"
@@ -39,21 +43,33 @@
             android:layout_height="150px"
             android:layout_marginLeft="250px"
             android:layout_marginTop="50px"
+            android:textSize="60px"
+            android:gravity="center"
             android:background="@android:color/transparent"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="650px"
         android:orientation="horizontal"
-        android:paddingTop="10dp">
-        <Button
-            android:id="@+id/b_reflektor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/reklektor_auswahl"
-            />
-
+        android:paddingTop="10dp"
+        android:background="@drawable/kabelsalat">
+        <LinearLayout
+            android:layout_width="300px"
+            android:layout_height="match_parent"
+            android:background="@drawable/side_button">
+            <Button
+                android:id="@+id/b_reflektor"
+                android:layout_width="170px"
+                android:layout_height="220px"
+                android:text="@string/reklektor_auswahl"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="190px"
+                android:layout_marginLeft="60px"
+                android:textSize="40px"
+                android:gravity="center"
+                />
+        </LinearLayout>
             <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="600px"
@@ -65,45 +81,68 @@
                     android:layout_width="match_parent"
                     android:layout_height="300px"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
+                    android:paddingLeft="50px"
+                    android:paddingTop="5px"
                     >
-                <TextView
-                    android:id="@+id/tv_rotor_text_anzeige3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rotor_3"/>
-                <TextView
-                    android:id="@+id/tv_rotor_text_anzeige2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rotor_2"/>
-                <TextView
-                    android:id="@+id/tv_rotor_text_anzeige1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rotor_1"/>
+                    <TextView
+                        android:id="@+id/tv_rotor_text_anzeige3"
+                        android:layout_width="160px"
+                        android:layout_height="160px"
+                        android:text="@string/rotor_3"
+                        android:textSize="80px"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:id="@+id/tv_rotor_text_anzeige2"
+                        android:layout_width="160px"
+                        android:layout_height="160px"
+                        android:text="@string/rotor_2"
+                        android:layout_marginLeft="120px"
+                        android:textSize="80px"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:id="@+id/tv_rotor_text_anzeige1"
+                        android:layout_width="160px"
+                        android:layout_height="160px"
+                        android:text="@string/rotor_1"
+                        android:layout_marginLeft="120px"
+                        android:textSize="80px"
+                        android:gravity="center"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp">
+                    android:paddingTop="10dp"
+                    android:layout_marginTop="98px"
+                    >
                     <Button
                         android:id="@+id/b_rotor_counter3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/counter_3"/>
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+
+                        android:background="@android:color/transparent"
+                        android:layout_marginLeft="70px"
+                        />
                     <Button
                         android:id="@+id/b_rotor_counter2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/counter_2"/>
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+
+                        android:background="@android:color/transparent"
+                        android:layout_marginLeft="195px"
+                        />
                     <Button
                         android:id="@+id/b_rotor_counter1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/counter_1"/>
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+
+                        android:background="@android:color/transparent"
+                        android:layout_marginLeft="185px"
+                        />
                 </LinearLayout>
             </LinearLayout>
     </LinearLayout>
