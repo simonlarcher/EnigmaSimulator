@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.masterprogrammer.enigmasimulator.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:orientation="horizontal"
+        android:background="@drawable/top_buttons"
+        >
+        <Button
+            android:id="@+id/b_rotor3_auswahl"
+            android:text="@string/rotor_auswahl_3"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="23sp"
+            android:layout_marginTop="12sp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+
+            />
+        <Button
+            android:id="@+id/b_rotor2_auswahl"
+            android:text="@string/rotor_auswahl_2"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="80sp"
+            android:layout_marginTop="12sp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@android:color/transparent"/>
+        <Button
+            android:id="@+id/b_rotor1_auswahl"
+            android:text="@string/rotor_auswahl_1"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="80sp"
+            android:layout_marginTop="12sp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="210sp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:background="@drawable/kabelsalat">
+        <LinearLayout
+            android:layout_width="90sp"
+            android:layout_height="170sp"
+            android:background="@drawable/side_button">
+            <Button
+                android:id="@+id/b_reflektor"
+                android:layout_width="50sp"
+                android:layout_height="63sp"
+                android:text="@string/reklektor_auswahl"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="52sp"
+                android:layout_marginLeft="19sp"
+                android:textSize="15sp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="250sp"
+            android:layout_height="190sp"
+            android:orientation="vertical"
+            android:background="@drawable/mainboard"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:orientation="horizontal"
+                android:paddingLeft="12sp"
+                android:paddingTop="13sp"
+
+                >
+                <TextView
+                    android:id="@+id/tv_rotor_text_anzeige3"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:text="@string/rotor_3"
+                    android:textSize="25sp"
+                    android:gravity="center"
+
+                    />
+                <TextView
+                    android:id="@+id/tv_rotor_text_anzeige2"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:text="@string/rotor_2"
+                    android:layout_marginLeft="44sp"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/tv_rotor_text_anzeige1"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:text="@string/rotor_1"
+                    android:layout_marginLeft="40sp"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90sp"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="1sp"
+                android:paddingTop="40sp"
+                >
+                <Button
+                    android:id="@+id/b_rotor_counter3"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="20sp"
+                    />
+                <Button
+                    android:id="@+id/b_rotor_counter2"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="50sp"
+                    />
+                <Button
+                    android:id="@+id/b_rotor_counter1"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp"
+
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="52sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_code_ausgabe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ausgabe_anfangs_text" />
+
+        <EditText
+            android:id="@+id/et_code_eingabe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/b_umwandeln"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/umwandeln" />
+    </LinearLayout>
+
+
+</LinearLayout>
