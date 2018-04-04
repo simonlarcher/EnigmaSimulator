@@ -6,11 +6,19 @@ package com.masterprogrammer.enigmasimulator;
 
 public class Rotor {
     private String[] einstellung;
-    private int verschiebung;
-    private String sprung;
+    private int verschiebung, rot_id;
+    private String sprung, name, einstellungen;
 
-    public Rotor(String[] einstellung, String sprung){
+    public Rotor(String name, String[] einstellung, String sprung){
+        this.name = name;
         this.einstellung = einstellung;
+        this.sprung = sprung;
+        verschiebung = 0;
+    }
+    public Rotor(String rot_id, String name, String einstellung, String sprung){
+        this.rot_id = Integer.parseInt(rot_id);
+        this.name = name;
+        this.einstellungen = einstellung;
         this.sprung = sprung;
         verschiebung = 0;
     }
@@ -29,6 +37,17 @@ public class Rotor {
     public String getSprung(){
         return sprung;
     }
+    public String getName(){return name;}
+    public String getEinstellung(){return einstellungen;}
+    public void setEinstellung(String einstellung){
+        this.einstellungen = einstellung;
+    }
+    public void setName(String Name){
+        this.name = name;
+    }
+    public void setSprung(String sprung){
+        this.sprung = sprung;
+    }
     public String getRotorAusereZahl(String innereBuchstbe, String[] alphabet){
         String code = "";
         for (int i = 0; i < einstellung.length; i++){
@@ -38,7 +57,7 @@ public class Rotor {
         }
         return code;
     }
-    public void setNewEinstellung(String[] einstellung, String sprung){
+    public void setEinstellung(String[] einstellung, String sprung){
         this.einstellung = einstellung;
         this.sprung = sprung;
     }

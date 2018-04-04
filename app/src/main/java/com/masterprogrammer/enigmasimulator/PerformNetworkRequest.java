@@ -10,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONStringer;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -23,10 +24,13 @@ public class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
     private String url;
 
     //die Daten
-    HashMap<String, String> params;
+    private HashMap<String, String> params;
 
     //get oder post
-    int requestCode;
+    private int requestCode;
+
+    private ArrayList<Reflektor> reflektoren;
+    private ArrayList<Rotor> rotoren;
 
     PerformNetworkRequest(String url, HashMap<String, String> params, int requestCode) {
         this.url = url;
@@ -48,10 +52,32 @@ public class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
         Log.i("DATEN", s + "");
         try {
             JSONObject object = new JSONObject(s);
-            JSONArray daten = new JSONArray(object.getJSONArray("enigma"));
             if (object.getBoolean("error") == false) {
                 //Toast.makeText(this, object.getString("message") , Toast.LENGTH_SHORT).show();
                 Log.i("Daten", object.getBoolean("error") + "");
+                if(object.getJSONArray("enigma") != null){
+                    JSONArray daten = object.getJSONArray("enigma");
+                    JSONObject o = daten.getJSONObject(0);
+                    Log.i("JSON", daten + "");
+                    if(o.getString("rot_id") != null){
+                        for(int i = 0; i < daten.length(); i++){
+                            JSONObject placeholder = daten.getJSONObject(i);
+                            //rotor
+                            rotoren.add(new Rotor(placeholder.getString(
+                                    "rot_id"),
+                                    placeholder.getString("name"),
+                                    placeholder.getString("code"),
+                                    placeholder.getString("sprungpunkt")
+                            ));
+                        }
+                    }
+                    else{
+                        for(int i = 0; i < daten.length(); i++){
+                            JSONObject placeholder = daten.getJSONObject(i);
+                            Log.i("JSON", o.getString("code"));
+                        }
+                    }
+                }
             }
             else{
             }

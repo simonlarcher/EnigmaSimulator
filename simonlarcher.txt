@@ -1,0 +1,31 @@
+===Datenbank simonlarcher
+
+== Tabellenstruktur für Tabelle reflektor
+
+|------
+|Spalte|Typ|Null|Standard
+|------
+|//**ref_id**//|bigint(20)|Nein|
+|name|varchar(40)|Nein|
+|code|varchar(30)|Nein|
+== Daten für Tabelle reflektor
+
+|1|Reflektor 1 (Standard)|EJMZALYXVBWFCRQUONTSPIKHGD
+|2|Reflektor 2|YRUHQSLDPXNGOKMIEBFZCWVJAT
+|3|Reflektor 3|FVPJIAOYEDRZXWGCTKUQSBNMHL
+== Tabellenstruktur für Tabelle rotor
+
+|------
+|Spalte|Typ|Null|Standard
+|------
+|//**rot_id**//|bigint(20)|Nein|
+|name|varchar(40)|Nein|
+|code|varchar(30)|Nein|
+|sprungpunkt|varchar(1)|Ja|NULL
+== Daten für Tabelle rotor
+
+|1|Rotor 1|EKMFLGDQVZNTOWYHXUSPAIBRCJ|Q
+|2|Rotor 2|AJDKSIRUXBLHWTMCQGZNPYFVOE|E
+|3|Rotor 3|BDFHJLCPRTXVZNYEIWGAKMUSQO|V
+|4|Rotor 4|ESOVPZJAYQUIRHXLNFTGKDCMWB|J
+|5|Rotor 5|VZBRGITYUPSDNHLXAWMJQOFECK|Z
