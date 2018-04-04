@@ -10,7 +10,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Gui gui;
+
+    private static final int CODE_GET_REQUEST = 1024;
+    private static final int CODE_POST_REQUEST = 1025;
+
+    //Design
+    //private Gui gui;
+    private WebserverCore webserverCore;
     private Core core;
     private Button[] b_rotorauswahl, b_counter;
     private TextView[] tv_rotor;
@@ -22,15 +28,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        gui = new Gui(this);
         core = new Core();
-
-
         //Gui
-
         allesInizialisieren();
-
         textViewsTextZuweisen();
+        webserverCore = new WebserverCore();
     }
 
     private void allesInizialisieren(){
@@ -79,8 +81,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
-
         Object o = findViewById(v.getId());
         if (o == b_reflektor) {
             //reflektor wechseln
@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < b_rotorauswahl.length; i++){
             if(b_rotorauswahl[i] == o){
                 //rotoren wechseln
+                webserverCore.getObject(true);
             }
         }
         for (int i = 0; i < b_counter.length; i++){
