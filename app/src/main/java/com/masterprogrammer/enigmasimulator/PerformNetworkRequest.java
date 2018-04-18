@@ -59,7 +59,7 @@ public class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
                     JSONArray daten = object.getJSONArray("enigma");
                     JSONObject o = daten.getJSONObject(0);
                     Log.i("JSON", daten + "");
-                    if(o.getString("rot_id") != null){
+                    if(o.getString("art").equals("getRotor")){
                         for(int i = 0; i < daten.length(); i++){
                             JSONObject placeholder = daten.getJSONObject(i);
                             //rotor
@@ -70,6 +70,25 @@ public class PerformNetworkRequest extends AsyncTask<Void, Void, String> {
                                     placeholder.getString("sprungpunkt")
                             ));
                         }
+                    }
+                    else if(o.getString("art").equals("getReflektor")){
+
+                    }
+                    else if(o.getString("art").equals("createRotor")){
+
+                    }
+                    else if(o.getString("art").equals("createReflektor")){
+
+                    }
+                    else if(o.getString("art").equals("updateRotor")){
+
+                    }else if(o.getString("art").equals("updateReflektor")){
+
+                    }else if(o.getString("art").equals("deleteRotor")){
+
+                    }
+                    else if(o.getString("art").equals("deleteReflektor")){
+
                     }
                     else{
                         for(int i = 0; i < daten.length(); i++){
