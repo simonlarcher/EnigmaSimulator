@@ -14,14 +14,14 @@ import java.util.ArrayList;
  * Created by Simon on 27.04.2018.
  */
 
-public class RotorHolder extends ArrayAdapter<String> {
+public class DatenHalter extends ArrayAdapter<String> {
 
     private static class ViewHolder {
         public TextView tvName;
     }
 
 
-    public RotorHolder (@NonNull Context context, ArrayList<String> name){
+    public DatenHalter(@NonNull Context context, ArrayList<String> name){
         super(context, 0, name);
     }
 
