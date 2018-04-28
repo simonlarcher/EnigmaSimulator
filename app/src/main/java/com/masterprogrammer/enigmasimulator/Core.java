@@ -25,17 +25,7 @@ public class Core {
         alphabet = new Alphabet();
         plugboard = new Plugboard(alphabet.getAlphabet());
     }
-    public Rotor getRotor(int welcherRotor){
-        if(welcherRotor == 0){
-            return rotor1;
-        }
-        else if(welcherRotor == 1){
-            return rotor2;
-        }
-        else{
-            return rotor3;
-        }
-    }
+
     public String verOderEntschlüsseln(String code){
         code = code.toUpperCase();
         //String[] ary = code.split("");
@@ -53,7 +43,7 @@ public class Core {
     public Alphabet getAlphabet(){
         return alphabet;
     }
-    public Reflektor getReflektor(){
-        return reflektor;
+    public Verschlüsselungsalgorithmus getVerschlüsselungsalgorithmus(){
+        return verschlüsselungsalgorithmus;
     }
 }
