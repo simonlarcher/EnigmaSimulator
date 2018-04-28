@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Enigma Simulator.iml" filepath="$PROJECT_DIR$/Enigma Simulator.iml" />
+      <module fileurl="file://Y:\____\Enigma\Enigmas\EN\eni\EnigmaSimulator\Enigma Simulator.iml" filepath="Y:\____\Enigma\Enigmas\EN\eni\EnigmaSimulator\Enigma Simulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EnigmaSimulator.iml" filepath="$PROJECT_DIR$/.idea/EnigmaSimulator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://Y:\____\Enigma\Enigmas\EN\eni\EnigmaSimulator\app\app.iml" filepath="Y:\____\Enigma\Enigmas\EN\eni\EnigmaSimulator\app\app.iml" />
     </modules>
   </component>
 </project>

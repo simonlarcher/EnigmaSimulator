@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tv_code_ausgabe;
     private Button b_reflektor, b_umwandeln;
     private EditText et_code_eingabe;
+    private int welcherRotor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void textViewsTextZuweisen(){
         for (int i = 0; i < tv_rotor.length; i++){
-            tv_rotor[i].setText(core.getRotor(i).getVersciebung() + "");
+            tv_rotor[i].setText(core.getVerschlüsselungsalgorithmus().getRotor(i).getVersciebung() + "");
         }
     }
 
@@ -103,14 +104,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < b_rotorauswahl.length; i++){
             if(b_rotorauswahl[i] == o){
                 //rotoren wechseln
+                welcherRotor = i;
                 webserverCore.getObject(true);
             }
         }
         for (int i = 0; i < b_counter.length; i++){
             if(b_counter[i] == o){
-                core.getRotor(i).verschieben();
-                tv_rotor[i].setText(core.getRotor(i).getVersciebung() + "");
+                core.getVerschlüsselungsalgorithmus().getRotor(i).verschieben();
+                tv_rotor[i].setText(core.getVerschlüsselungsalgorithmus().getRotor(i).getVersciebung() + "");
             }
         }
+    }
+    public int getWelcherRotor(){
+        return welcherRotor;
+    }
+    public Core getCore(){
+        return core;
     }
 }

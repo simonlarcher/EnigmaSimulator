@@ -146,4 +146,43 @@ public class Verschlüsselungsalgorithmus {
         }
         return code;
     }
+    public void setRotor(int welcherRotor, Rotor rotor){
+        if(welcherRotor == 0){
+            int verschiebung = rotor1.getVersciebung();
+            rotor.setVerschiebung(verschiebung);
+            rotor1 = rotor;
+        }
+        else if(welcherRotor == 1){
+            int verschiebung = rotor2.getVersciebung();
+            rotor.setVerschiebung(verschiebung);
+            rotor2 = rotor;
+        }
+        else{
+            int verschiebung = rotor3.getVersciebung();
+            rotor.setVerschiebung(verschiebung);
+            rotor3 = rotor;
+        }
+    }
+    public Rotor getRotor(int welcherRotor){
+        if(welcherRotor == 0){
+            return rotor1;
+        }
+        else if(welcherRotor == 1){
+            return rotor2;
+        }
+        else{
+            return rotor3;
+        }
+    }
+    public void setReflektor(Reflektor reflektor){
+        this.reflektor = reflektor;
+        String[] h = reflektor.getReflektor();
+        for (int i = 0; i < h.length; i++){
+           Log.i("mmmmmmmmmmmm" ,  h[i] + "");
+        }
+
+    }
+    public Reflektor getReflektor(){
+        return reflektor;
+    }
 }

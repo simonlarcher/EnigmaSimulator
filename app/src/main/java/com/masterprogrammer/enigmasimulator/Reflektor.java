@@ -1,5 +1,7 @@
 package com.masterprogrammer.enigmasimulator;
 
+import android.util.Log;
+
 /**
  * Created by Benedikt Smith on 28.02.2018.
  */
@@ -8,23 +10,31 @@ public class Reflektor {
     private int ref_id;
     private String[] reflektor;
     private String name;
-    private String code;
     public Reflektor(String[] reflektor){
         this.setReflektor(reflektor);
     }
 
     public Reflektor(int ref_id, String name, String code){
         this.setName(name);
-        this.setCode(code);
+        code = code.toUpperCase();
+
+
+        String[] h = code.split("");
+        reflektor = h;
+        for (int i = 0; i < h.length; i++){
+            if (i == 0){
+            }
+            else if(i > 0){
+                reflektor[i - 1] = h[i];
+            }
+            else if(i == 26){
+            }
+        }
         this.setRef_id(ref_id);
-    }
-    public Reflektor(String name, String code){
-        this.setName(name);
-        this.setCode(code);
     }
 
     public String getEntgegengesetzteZahl(int welcheZahlImReflektor){
-        return getReflektor()[welcheZahlImReflektor];
+        return reflektor[welcheZahlImReflektor];
     }
     public void setNewEinstellung(String[] einstellung){
         this.setReflektor(einstellung);
@@ -46,10 +56,6 @@ public class Reflektor {
         this.name = name;
     }
 
-    public String getCode() {
-        return code;
-    }
-
     public void setRef_id(int ref_id) {
         this.ref_id = ref_id;
     }
@@ -58,7 +64,4 @@ public class Reflektor {
         return ref_id;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
 }

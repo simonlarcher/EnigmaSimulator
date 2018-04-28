@@ -1,5 +1,7 @@
 package com.masterprogrammer.enigmasimulator;
 
+import android.util.Log;
+
 /**
  * Created by Benedikt Smith on 28.02.2018.
  */
@@ -22,15 +24,35 @@ public class Rotor {
     public Rotor(String rot_id, String name, String einstellung, String sprung){
         this.rot_id = Integer.parseInt(rot_id);
         this.name = name;
-        this.einstellungen = einstellung;
+        einstellung = einstellung.toUpperCase();
+        this.einstellung = einstellung.split("");
         this.sprung = sprung;
         verschiebung = 0;
+        String[] h =  einstellung.split("");
+        for (int i = 0; i < h.length; i++){  //length = 27
+            if (i == 0){
+            }
+            else if(i > 0){
+                this.einstellung[i - 1] = h[i];
+
+            }
+            else if(i == 26){
+            }
+
+        }
+        for (int i = 0;i < this.einstellung.length; i++){
+            Log.i("mmmmmmmmmmmmm" , this.einstellung[i] + " " + i);
+        }
+
     }
     public String getEntgegengesetzteZahl(int welcheZahlImRotor){
         return einstellung[welcheZahlImRotor];
     }
     public int getVersciebung(){
         return verschiebung;
+    }
+    public void setVerschiebung(int verschiebung){
+        this.verschiebung = verschiebung;
     }
     public void verschieben(){
         verschiebung++;
@@ -54,7 +76,7 @@ public class Rotor {
     }
     public String getRotorAusereZahl(String innereBuchstbe, String[] alphabet){
         String code = "";
-        for (int i = 0; i < einstellung.length; i++){
+        for (int i = 0; i < 26; i++){
             if(getEntgegengesetzteZahl(i).equals(innereBuchstbe)){
                 code = alphabet[i];
             }
