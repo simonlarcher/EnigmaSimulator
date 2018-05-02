@@ -96,7 +96,7 @@ public class WebserverCore {
         }
         if (rotor){
             if (TextUtils.isEmpty(sprungpunkt)) {
-                e_code.setError("Please enter real name");
+                e_code.setError("Richtigen sprungpunkt eingeben");
                 e_code.requestFocus();
                 return;
             }
